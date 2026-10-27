@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<books>
+    <book id="101">
+        <name>Bok One</name>
+        <author>Adyan</author>
+        <description>Description</description>
+        <first-edition>Yes</first-edition>
+    </book>
+    <book id="102">
+        <name>Bok Two</name>
+        <author>Fahad</author>
+        <description>Description</description>
+        <first-edition>No</first-edition>
+    </book>
+</books>

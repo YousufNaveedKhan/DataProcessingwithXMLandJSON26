@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="style.css" type="text/css"?>
+
+<!-- Yeh ek comment hai -->
+<employees>
+    <employee id="6001">
+        <name>Ibrahim</name>
+        <department>Sales</department>
+        <salary>80000</salary>
+        <note>50 &gt; 30 &amp; 30 &lt; 50</note>
+        <code><![CDATA[ if (marks < 40) { fail(); } ]]></code>
+    </employee>
+</employees>

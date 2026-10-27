@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<students>
+    <student id="1">
+        <name>Moiz</name>
+        <course>ADSE</course>
+        <email>moiz@gmail.com</email>
+    </student>
+    <student id="2">
+        <name>Adyan</name>
+        <course>DISM</course>
+        <email>adyan@gmail.com</email>
+    </student>
+    <student id="3">
+        <name>Zainab</name>
+        <course>CPISM</course>
+        <email>zainab@gmail.com</email>
+    </student>
+</students>

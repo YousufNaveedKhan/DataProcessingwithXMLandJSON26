@@ -54,7 +54,6 @@ Kisi website ke (apni, ya farzi) **4 pages** ka sitemap likho:
 
 - Root `<urlset>` aur **default namespace** `http://www.sitemaps.org/schemas/sitemap/0.9`
 - Har `<url>` mein `<loc>` (poora URL `https://...`) aur `<lastmod>` (format `YYYY-MM-DD`)
-- Kam az kam ek URL aisa ho jis mein query ho aur uska `&` sahi tareeqe se likha ho (`?a=1&amp;b=2`)
 - Chrome mein kholo, tree ka **screenshot** lo
 
 ## Part E — Bonus (zaroori nahi)

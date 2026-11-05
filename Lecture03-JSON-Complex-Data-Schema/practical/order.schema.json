@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Order",
+  "description": "order.json ke rules. JSON Schema = JSON ka apna XSD.",
+  "type": "object",
+  "required": ["orderId", "placedAt", "customer", "items", "paid"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "type": "string" },
+
+    "orderId": { "type": "string", "pattern": "^ORD-[0-9]{4,}$" },
+    "placedAt": { "type": "string", "format": "date-time" },
+
+    "customer": {
+      "type": "object",
+      "required": ["name", "email", "address"],
+      "properties": {
+        "name": { "type": "string", "minLength": 2 },
+        "email": { "type": "string", "format": "email" },
+        "phone": { "type": ["string", "null"] },
+        "address": {
+          "type": "object",
+          "required": ["line1", "city", "country"],
+          "properties": {
+            "line1": { "type": "string" },
+            "city": { "type": "string" },
+            "country": { "type": "string", "enum": ["PK", "AE", "SA"] }
+          }
+        }
+      }
+    },
+
+    "items": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["sku", "title", "qty", "unitPricePkr"],
+        "additionalProperties": false,
+        "properties": {
+          "sku": { "type": "string", "pattern": "^[A-Z]{2}-[0-9]{2}$" },
+          "title": { "type": "string" },
+          "qty": { "type": "integer", "minimum": 1, "maximum": 100 },
+          "unitPricePkr": { "type": "integer", "minimum": 0 },
+          "tags": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    },
+
+    "paid": { "type": "boolean" },
+    "paymentMethod": { "type": "string", "enum": ["cod", "card", "bank-transfer"] },
+    "notes": { "type": "string", "maxLength": 200 },
+    "customerNameUrdu": { "type": "string" }
+  }
+}
